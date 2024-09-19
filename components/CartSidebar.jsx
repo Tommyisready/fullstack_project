@@ -1,13 +1,15 @@
 "use client";
 
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
+import { useShoppingCart } from "use-shopping-cart";
 
 const CartSidebar = () => {
+  const { cartCount, cartDetails, shouldDisplayCart, handleCartClick, totalPrice } = useShoppingCart();
   return (
-    <Sheet>
+    <Sheet open={shouldDisplayCart} onOpenChange={() => handleCartClick()}>
       <SheetContent>
         <SheetHeader>
-          <SheetTitle>My Shopping Cart</SheetTitle>
+          <SheetTitle className="text-left mb-12">My Shopping Cart({cartCount})</SheetTitle>
         </SheetHeader>
       </SheetContent>
     </Sheet>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const AddToCartBtn = ({ btnStyles, text, icon }) => {
+const AddToCartBtn = ({ btnStyles, text, icon, id, description, name, currency, images, price }) => {
   return (
     <button className={`${btnStyles}`}>
       <div>{text}</div>
