@@ -1,9 +1,8 @@
 import BikeCategories from "@/components/BikeCategories";
 import { client } from "../lib/sanity";
 
-
 const getData = async () => {
-    const query = `*[_type == 'product'] {
+  const query = `*[_type == 'product'] {
   _id,
     name,
     description,
@@ -13,16 +12,16 @@ const getData = async () => {
     "slug": slug.current,
     "categories": categories[]->{name}
 }`;
-const data = await client.fetch(query);
-return data;
-}
+  const data = await client.fetch(query);
+  return data;
+};
 
-const OurBikes = () => {
-    const bikes = await getData()
+const OurBikes = async () => {
+  const bikes = await getData();
   return (
-  <div>
-    <BikeCategories bikes={bikes}/>
-  </div>
+    <div>
+      <BikeCategories bikes={bikes} />
+    </div>
   );
 };
 
