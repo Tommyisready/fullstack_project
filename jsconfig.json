@@ -2,6 +2,10 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./*"]
-    }
-  }
+    },
+    "checkJs": false, // Désactive la vérification TypeScript pour les fichiers JavaScript et JSX
+    "jsx": "react-jsx", // Spécifie que vous utilisez JSX avec React
+    "allowJs": true // Permet l'utilisation de fichiers JavaScript dans un projet TypeScript
+  },
+  "exclude": ["node_modules"]
 }

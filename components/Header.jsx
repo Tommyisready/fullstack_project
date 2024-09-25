@@ -14,11 +14,11 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="hover:text-current">
           <h1 className="text-[26px]">
-            <span className="text-red-500">B</span>ikezz
+            <span className="text-red-500">E</span>asybike
           </h1>
         </Link>
         <div className="flex items-center gap-[26px]">
-          <Nav />
+          <Nav containerStyles="flex gap-[36px]" />
           <div onClick={() => handleCartClick()} className="relative cursor-pointer">
             <CgShoppingBag className="text-[26px]" />
             <div className="bg-red-500 w-[18px] h-[18px] absolute -right-1 -bottom-1 rounded-full text-white flex items-center justify-center text-sm font-medium">{cartCount}</div>

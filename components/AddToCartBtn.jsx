@@ -1,8 +1,10 @@
+"use client";
+
 import { useToast } from "@/components/ui/use-toast";
 import React from "react";
 import { useShoppingCart } from "use-shopping-cart";
 
-const AddToCartBtn = ({ btnStyles, text, icon, id, description, name, currency, images, price }) => {
+const AddToCartBtn = ({ btnStyles, text, icon, id, description, name, currency, images, price, price_id }) => {
   const { addItem } = useShoppingCart();
   const { toast } = useToast();
 
@@ -14,6 +16,7 @@ const AddToCartBtn = ({ btnStyles, text, icon, id, description, name, currency, 
     description: description, // Description du produit
     images: images, // Images (si disponibles)
     price: price, // Prix (en centimes)
+    price_id: price_id,
   };
 
   return (
